@@ -7,6 +7,6 @@ FactoryGirl.define do
     content "MyString"
     keywords "MyString"
     description "MyString"
-    published "MyString"
+    published true
   end
 end
