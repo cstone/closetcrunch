@@ -27,6 +27,7 @@ end
 
 group :development, :test do
   gem 'guard-rspec'
+  gem 'guard-spork'
   gem 'rspec-rails', '~> 2.0'
   gem 'spork', '~> 1.0rc'
 end
