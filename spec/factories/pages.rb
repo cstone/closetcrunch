@@ -8,15 +8,20 @@ FactoryGirl.define do
     keywords "about us, about closetcrunch"
     description "Read about Closetcrunch. Who we are and what we stand for."
 
-    trait :published do
+    trait(:published) do
       published true
     end
 
-    trait :unpublished do
+    trait(:unpublished) do
       published false
     end
   end
 
-  factory :published_page,   traits: [:published]
-  factory :unpublished_page, traits: [:unpublished]
+  factory :published_page, parent: :page do
+    published
+  end
+
+  factory :unpublished_page, parent: :page do
+    unpublished
+  end
 end
