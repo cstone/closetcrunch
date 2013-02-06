@@ -2,11 +2,11 @@
 
 FactoryGirl.define do
   factory :page do
-    title "MyString"
-    slug "MyString"
-    content "MyString"
-    keywords "MyString"
-    description "MyString"
+    title "About Us"
+    slug "about-us"
+    content "<h1>About Us</h1><p>Lorem ipsum</p>"
+    keywords "about us, about closetcrunch"
+    description "Read about Closetcrunch. Who we are and what we stand for."
 
     trait :published do
       published true
