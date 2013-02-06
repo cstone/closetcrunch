@@ -1,6 +1,7 @@
 ClosetCrunch::Application.routes.draw do
-  resources :pages, only: :show
+  devise_for :users
 
+  resources :pages, only: :show
   get '/:id' => 'pages#show'
 
   root to: 'pages#show', id: :home
