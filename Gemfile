@@ -25,3 +25,7 @@ group :development do
   gem 'terminal-notifier-guard'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
