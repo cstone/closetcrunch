@@ -7,6 +7,16 @@ FactoryGirl.define do
     content "MyString"
     keywords "MyString"
     description "MyString"
-    published true
+
+    trait :published do
+      published true
+    end
+
+    trait :unpublished do
+      published false
+    end
   end
+
+  factory :published_page,   traits: [:published]
+  factory :unpublished_page, traits: [:unpublished]
 end
