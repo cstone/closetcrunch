@@ -27,6 +27,7 @@ group :development do
 end
 
 group :development, :test do
+  gem 'factory_girl_rails'
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'rspec-rails', '~> 2.0'
