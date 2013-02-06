@@ -1,0 +1,216 @@
+  .row-fluid.contentmargin
+    .span2
+      %h4 Filter
+      .row-fluid
+        %h5 Category
+        .row-fluid
+          %select.span12{ name: 'd' }
+            %option Category
+            %option Dallas, Texas
+            %option New York, New York
+      .row-fluid
+        .row-fluid
+          %select.span12{ name: 'd' }
+            %option Subcategory
+            %option Dallas, Texas
+            %option New York, New York
+      %hr
+      .row-fluid
+        %h5 Size &ndash; Men
+        .row-fluid
+          %label.checkbox
+            %input#inlineCheckbox2{ type: 'checkbox', value: 'option2' }
+            Small
+          %label.checkbox
+            %input#inlineCheckbox3{ type: 'checkbox', value: 'option3' }
+            Medium
+          %label.checkbox
+            %input#inlineCheckbox1{ type: 'checkbox', value: 'option1' }
+            Large
+      %hr
+      .row-fluid
+        %h5 Item Condition
+        .row-fluid
+          %label.checkbox
+            %input#inlineCheckbox2{ type: 'checkbox', value: 'option2' }
+            New
+          %label.checkbox
+            %input#inlineCheckbox3{ type: 'checkbox', value: 'option3' }
+            Pre-owned
+          %label.checkbox
+            %input#inlineCheckbox1{ type: 'checkbox', value: 'option1' }
+            Defective
+      %hr
+      .row-fluid
+        %h5 Seller Type
+        .row-fluid
+          %label.checkbox
+            %input#inlineCheckbox1{ type: 'checkbox', value: 'option1' }
+            Individual
+          %label.checkbox
+            %input#inlineCheckbox2{ type: 'checkbox', value: 'option2' }
+            Business
+      %hr
+      .row-fluid
+        = link_to 'Submit', '#', class: 'btns btns-orange'
+        = link_to 'Clear', '#', class: 'btns'
+
+    .span8.borderright.borderleft
+      %h3 Men
+      .row-fluid
+        .span6
+          %input.span12{ placeholder: 'Search...', type: 'text' }
+        .span6
+          %select.span7.pull-right{ name: 'd' }
+            %option Sort:
+            %option Alphabetically: A to Z
+            %option Alphabetically: Z to A
+            %option Date Posted: Newest to Oldest
+            %option Date Posted: Oldest to Newest
+      %br
+      .row-fluid= image_tag asset_path('ads/adsense_185679_adformat-link_728x15_en.png'), size: '698x15'
+      %br
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .span3= link_to image_tag(asset_path('P14206720.jpg'), alt: 'Jeans', size: '250x250', class: 'thumbnail'), '#'
+        .span7
+          = link_to 'Item Title', '#', class: 'itemtitle'
+          %span.supernew New
+          .row-fluid Size: 32x30
+          .row-fluid Condition: Used
+          .row-fluid Brand: Nike
+          .row-fluid
+        .span2.textright
+          .row-fluid.itemprice $99.99
+          .row-fluid.watchstar
+            = link_to '#', title: 'Watch this item' do
+              %i.icon-star-empty
+      %hr
+      .row-fluid
+        .pagination.pagination-centered
+          %ul
+            %li= link_to 'Prev', '#'
+            %li= link_to '1', '#'
+            %li= link_to '2', '#'
+            %li= link_to '3', '#'
+            %li= link_to '4', '#'
+            %li= link_to 'Next', '#'
