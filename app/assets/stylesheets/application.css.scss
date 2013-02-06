@@ -9,7 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require bootstrap.closetcrunch
  *= require font-awesome.min
+ *= require wide
+ *= require style
+ *= require closetcrunch
  *= require_tree .
  */
-@import 'bootstrap';
