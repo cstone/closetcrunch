@@ -1,0 +1,315 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN MASTHEAD STYLES 
+
+***************************************
+***************************************
+***************************************/
+
+.logomargin {
+	/*margin-top: 15px;*/
+	margin-bottom: 10px;
+}
+.searchmargintop {
+	margin-top:14px;
+}
+
+.searchbutton {
+	padding: 8px 12px;
+	margin-top:14px;
+}
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+END MASTHEAD STYLES 
+
+***************************************
+***************************************
+***************************************/
+
+
+
+
+
+
+#navigation ul li a:hover, #navigation ul li:hover > a, #bolded-line, .button.gray:hover, .button.light:hover, .button.color, input[type="button"] {
+background: #DF4914;
+color: #fff !important;
+}
+
+
+
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN CONTENT STYLES
+
+***************************************
+***************************************
+***************************************/
+
+#regform .bigformoneline {
+font-size: 15px;
+padding: 18px 10px;
+}
+.textright {
+	text-align:right;
+}
+
+.borderleft {
+border-left: 1px solid #EEEEEE;
+padding-left: 15px;
+}
+.borderright {
+border-right: 1px solid #EEEEEE;
+padding-right: 15px;
+}
+
+.itemprice {
+	font-weight:bold;
+	font-size:15px;
+}
+
+.itemtitle {
+	font-weight:bold;
+	font-size:15px;
+}
+
+a.itemtitle  {
+	color:#495678;
+	/*color:#839BA7;*/
+	line-height:300%;
+}
+
+.itemtitle a:hover,  a.itemtitle:hover {
+	color:#DF4914;
+}
+
+.areaname {
+	font-size:26px;
+	font-weight:bold;
+	padding-top:30px;
+	text-align:left;
+	color:#495678;
+}
+.supernew {
+	vertical-align:super;
+	font-size:10px;
+	color:#DF4914;
+	margin-left: 5px;
+	border: 1px solid #DDD;
+	padding:0 2px;
+	-webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+li.membernav, li.membernav a {
+	background-color:#839BA7;
+}
+/**************************************
+***************************************
+***************************************
+
+END CONTENT STYLES
+
+***************************************
+***************************************
+***************************************/
+
+
+
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN BUTTON STYLES
+
+***************************************
+***************************************
+***************************************/
+.btns {
+display: inline-block;
+padding: 4px 12px;
+margin-bottom: 0;
+font-size: 14px;
+line-height: 20px;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+color: #333333;
+background-color: #f5f5f5;
+border: 1px solid #bbbbbb;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+
+.btns-main, a.btns-main {
+color: #333333;
+background-color: #495678;
+
+}
+a.btns-main:hover {
+color: #ffffff;
+background-color: #495678;
+}
+
+
+.btns-alt, a.btns-alt {
+color: #333333;
+background-color: #839BA7;
+
+}
+a.btns-alt:hover {
+color: #ffffff;
+background-color: #839BA7;
+}
+
+
+.btns-orange, a.btns-orange {
+color: #ffffff;
+background-color: #DF4914;
+border: 1px solid #DF4914;
+
+}
+a.btns-orange:hover {
+color: #ffffff;
+background-color: #D74413;
+
+}
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+END BUTTON STYLES
+
+***************************************
+***************************************
+***************************************/
+
+
+
+
+
+
+.watchstar, .watchstar a {
+	font-size:22px;
+	color:#DF4914;
+	line-height:160%;
+}
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN FOOTER STYLES
+
+***************************************
+***************************************
+***************************************/
+
+.footer {
+	border-top:1px solid #EEEEEE;
+	padding:35px 10px 40px;
+	background-color: #495678;
+	color: #FFFFFF;
+}
+
+.footerdescription {
+	font-size:14px;
+	line-height:140%;
+}
+
+.footernav {
+	margin:15px 0;
+}
+
+ul.socialfooter li {
+	display:inline;
+}
+
+ul.footernavlist  li {
+	display:inline;
+	margin-right:8px;
+}
+
+.footer a {
+	color:#FFFFFF;
+	font-weight: bold;
+}
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN FOOTER STYLES
+
+***************************************
+***************************************
+***************************************/
+
+
+
+
+
+
+
+
+/**************************************
+***************************************
+***************************************
+
+BEGIN RESPONSIVE STYLES
+
+***************************************
+***************************************
+***************************************/
+
+
+/**************************************
+***************************************
+***************************************
+
+END RESPONSIVE STYLES
+
+***************************************
+***************************************
+***************************************/
