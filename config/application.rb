@@ -65,6 +65,9 @@ module ClosetCrunch
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
+    # Asset paths
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
+
     # Like a rock, Like a planet, Like a fucking atom bomb! - Bad Religion
     config.generators do |g|
       g.view_specs false
