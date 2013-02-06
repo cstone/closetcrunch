@@ -1,0 +1,42 @@
+#navigation
+  %ul#nav
+    %li= link_to 'Home', '#'
+    %li= link_to 'Men', '#', class: 'active'
+    %li
+      = link_to 'Women', '#'
+      %ul
+        %li= link_to 'Petite', '#'
+        %li= link_to 'Tall', '#'
+        %li= link_to 'Plus Size', '#'
+        %li= link_to 'Maternity', '#'
+    %li
+      = link_to 'Children', '#'
+      %ul
+        %li= link_to 'Infant Boy', '#'
+        %li= link_to 'Infant Girl', '#'
+        %li= link_to 'Toddler Boy', '#'
+        %li= link_to 'Toddler Girl', '#'
+        %li= link_to 'Boy', '#'
+        %li= link_to 'Girl', '#'
+    %li= link_to 'Forums', '#'
+    %li
+      = link_to 'More', '#'
+      %ul
+        %li= link_to 'About Us', '#'
+        %li= link_to 'Privacy Policy', '#'
+        %li= link_to 'Terms of Service', '#'
+        %li= link_to 'Contact Us', '#'
+    %li
+      = link_to 'My Account', '#'
+      %ul
+        %li= link_to 'New Listing', '#'
+        %li= link_to 'My Listings', '#'
+        %li= link_to 'Watchlist', '#'
+        %li= link_to 'Account Settings', '#'
+        %li= link_to 'Logout', '#'
+    %li.membernav
+      = link_to '#' do
+        %i.icon-plus
+        New Listing
+.nav-shadow
+.clear

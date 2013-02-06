@@ -1,0 +1,35 @@
+.footer
+  .container-fluid
+    .row-fluid.footerdescription
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec fermentum tortor
+      ut nisl vehicula gravida. Nulla hendrerit elit vel risus pellentesque rutrum.
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+      Curae; Sed sit amet lectus quis nisl laoreet sodales. Praesent imperdiet ipsum
+      quis nulla adipiscing in accumsan risus consectetur. Nunc ultricies dictum lorem,
+      non fringilla nulla suscipit vitae. In hac habitasse platea dictumst. Vivamus
+      vel arcu ac diam aliquam tincidunt et ac sem. Aenean at lacinia mi. Fusce laoreet,
+      mi egestas elementum cursus, magna justo hendrerit augue, at vehicula tortor
+      eros a ligula.
+    .row-fluid.footernav
+      %ul.footernavlist
+        %li= link_to 'Home', '#'
+        %li= link_to 'About Us', '#'
+        %li= link_to 'FAQ\'s', '#'
+        %li= link_to 'User Agreement', '#'
+        %li= link_to 'Privacy Policy', '#'
+        %li= link_to 'Contact Us', '#'
+    .row-fluid
+      Logged in as
+      = link_to 'example@example.com', '#'
+      = raw "(#{link_to 'Log out', '#'})"
+    %br
+    .row-fluid
+      .span9
+        Copyright &copy; 2013 Closetcrunch.com. All Rights Reserved
+      .span3.textright
+        %ul.socialfooter
+          %li
+            = link_to '#' do
+              %i.icon-facebook
+            = link_to '#' do
+              %i.icon-twitter

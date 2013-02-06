@@ -1,0 +1,16 @@
+.row-fluid.logomargin
+  .span2
+    = link_to image_tag(asset_path('logo.jpg'), size: '199x67', alt: 'Closetcrunch Logo'), root_path
+  .span3
+    .row-fluid.areaname Los Angeles, CA
+    .row-fluid= link_to '(Change your area)', '#'
+  .span4.offset3.textright#regform
+    .row-fluid
+      .input-append
+        %input.span10.bigformoneline.searchmargintop#appendedInputButton{ placeholder: 'Search...', type: 'text' }
+        %button.btn.searchbutton{ type: 'button' }
+          %i.icon-search
+    .row-fluid
+      Logged in as
+      = link_to 'example@example.com', '#'
+      = raw "(#{link_to 'Log out', '#'})"
