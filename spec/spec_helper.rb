@@ -12,6 +12,9 @@ Spork.prefork do
   Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
   RSpec.configure do |config|
+    config.include Rails.application.routes.url_helpers
+    config.include FactoryGirl::Syntax::Methods
+
     # ## Mock Framework
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -38,9 +41,6 @@ Spork.prefork do
     # the seed, which is printed after each run.
     #     --seed 1234
     config.order = "random"
-
-    # Include Rails named routes
-    config.include Rails.application.routes.url_helpers
   end
 end
 
