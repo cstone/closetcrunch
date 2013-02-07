@@ -1,16 +1,39 @@
-%h2 Sign in
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-  %div
-    = f.label :email
-    %br/
-    = f.email_field :email, :autofocus => true
-  %div
-    = f.label :password
-    %br/
-    = f.password_field :password
-  - if devise_mapping.rememberable?
-    %div
-      = f.check_box :remember_me
-      = f.label :remember_me
-  %div= f.submit "Sign in"
-= render "devise/shared/links"
+.span7.borderright
+  %h2 Sign in
+  .row-fluid You control this from the admin section
+  %br
+  #regform
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+      .row-fluid
+        = f.email_field :email, class: 'bigformoneline span9', placeholder: 'Email Address'
+      .row-fluid
+        = f.password_field :password, class: 'bigformoneline span9', placeholder: 'Password'
+      - if devise_mapping.rememberable?
+        .row-fluid
+          .span2
+            %label.checkbox
+              Remember me
+              = f.check_box :remember_me
+          .span8
+            = link_to 'Forgot password?'
+      %hr
+      .row-fluid
+        .span4
+          %button.btn.btn-large.btn-block.btn-main{ type: 'submit' } Sign in
+
+.span3.borderright
+  %h4 Sign in via
+  .row-fluid
+    = link_to '#', class: 'btn btn-large btn-block btn-facebook' do
+      %i.icon-facebook
+      Facebook
+  %br
+  .row-fluid
+    = link_to '#', class: 'btn btn-large btn-block btn-twitter' do
+      %i.icon-twitter
+      Twitter
+  %hr
+  %h4 Not a member?
+  .row-fluid
+    = link_to 'Join now', new_registration_path(resource_name), class: 'btn btn-large btn-block btn-orange'
+
