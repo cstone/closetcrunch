@@ -126,6 +126,22 @@ a.itemtitle  {
 li.membernav, li.membernav a {
 	background-color:#839BA7;
 }
+
+.formhelptext {
+	font-size:13px;
+	font-style:italic;
+}
+
+.formhelptext a {
+	color: #DF4914;
+	font-weight:bold;
+}
+
+
+.formhelptext a:hover {
+	color: #495678;
+}
+
 /**************************************
 ***************************************
 ***************************************
@@ -206,7 +222,48 @@ background-color: #D74413;
 }
 
 
+.btn-main, a.btn.btn-block.btn-main {
+color: #ffffff;
+background: #495678;
+}
+.btn-main:hover, a.btn.btn-block.btn-main:hover {
+color: #ffffff;
+background: #434F6D;
+}
 
+
+
+.btn-orange, a.btn.btn-block.btn-orange {
+color: #ffffff;
+background: #D74413;
+}
+.btn-orange:hover, a.btn.btn-block.btn-orange:hover {
+color: #ffffff;
+background: #CF4212;
+}
+
+
+
+.btn-facebook, a.btn.btn-block.btn-facebook {
+color: #ffffff;
+background: #314A7E;
+}
+
+.btn-facebook:hover, a.btn.btn-block.btn-facebook:hover {
+color: #ffffff;
+background: #2D4373;
+}
+
+
+
+.btn-twitter:hover, a.btn.btn-block.btn-twitter:hover {
+color: #ffffff;
+background: #168EB6;
+}
+.btn-twitter, a.btn.btn-block.btn-twitter {
+color: #ffffff;
+background: #19A1CE;
+}
 
 
 
