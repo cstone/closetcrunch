@@ -1,7 +1,7 @@
 #navigation
   %ul#nav
     %li= link_to 'Home', '#'
-    %li= link_to 'Men', '#', class: 'active'
+    %li= link_to 'Men', '#'
     %li
       = link_to 'Women', '#'
       %ul
@@ -26,17 +26,18 @@
         %li= link_to 'Privacy Policy', '#'
         %li= link_to 'Terms of Service', '#'
         %li= link_to 'Contact Us', '#'
-    %li
-      = link_to 'My Account', '#'
-      %ul
-        %li= link_to 'New Listing', '#'
-        %li= link_to 'My Listings', '#'
-        %li= link_to 'Watchlist', '#'
-        %li= link_to 'Account Settings', '#'
-        %li= link_to 'Logout', '#'
-    %li.membernav
-      = link_to '#' do
-        %i.icon-plus
-        New Listing
+    - if user_signed_in?
+      %li
+        = link_to 'My Account', '#'
+        %ul
+          %li= link_to 'New Listing', '#'
+          %li= link_to 'My Listings', '#'
+          %li= link_to 'Watchlist', '#'
+          %li= link_to 'Account Settings', '#'
+          %li= link_to 'Logout', '#'
+      %li.membernav
+        = link_to '#' do
+          %i.icon-plus
+          New Listing
 .nav-shadow
 .clear
