@@ -11,6 +11,9 @@
         %button.btn.searchbutton{ type: 'button' }
           %i.icon-search
     .row-fluid
-      Logged in as
-      = link_to 'example@example.com', '#'
-      = raw "(#{link_to 'Log out', '#'})"
+      - if user_signed_in?
+        Logged in as
+        = link_to current_user.email, '#'
+        = raw "(#{link_to 'Log out', destroy_user_session_path, method: :delete})"
+      - else
+        = link_to 'Log in', new_user_session_path
