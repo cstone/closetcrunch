@@ -5,7 +5,6 @@ gem 'rails', '3.2.11'
 gem 'devise'
 gem 'haml-rails'
 gem 'jquery-rails'
-gem 'sqlite3'
 gem 'thin'
 
 group :assets do
@@ -25,6 +24,7 @@ group :development do
   gem 'rb-inotify', require: false
   gem 'rb-fsevent', require: false
   gem 'rb-fchange', require: false
+  gem 'sqlite3'
   gem 'terminal-notifier-guard'
 end
 
@@ -37,3 +37,6 @@ group :development, :test do
   gem 'spork', '~> 1.0rc'
 end
 
+group :production do
+  gem 'pg'
+end
