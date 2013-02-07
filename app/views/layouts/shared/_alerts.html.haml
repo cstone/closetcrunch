@@ -1,8 +1,4 @@
--# TODO - move these into the actual flash messages
-%p.notice= notice
-%p.alert= alert
-
-.alert
-  %button.close{ data: { dismiss: 'alert' }, type: 'button' } &times;
-  %strong Warning!
-  This is an alert which I can control from the admin.
+- flash.each do |name,msg|
+  .alert{ id: name }
+    %button.close{ data: { dismiss: 'alert' }, type: 'button' } &times;
+    = msg
