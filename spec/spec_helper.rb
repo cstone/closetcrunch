@@ -14,6 +14,7 @@ Spork.prefork do
   RSpec.configure do |config|
     config.include Rails.application.routes.url_helpers
     config.include FactoryGirl::Syntax::Methods
+    config.include Sorcery::TestHelpers::Rails
 
     # ## Mock Framework
     #
