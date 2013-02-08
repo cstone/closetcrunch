@@ -8,14 +8,12 @@ FactoryGirl.define do
   factory :user do
     email
     password 'mypassword'
-    password_confirmation 'mypassword'
   end
 
   factory :logged_in_user, class: :user do
     email
     password 'secret123'
-    password_confirmation 'secret123'
-    salt password_salt
-    crypted_password { Sorcery::CryptoProviders::BCrypt.encrypt("secret123", password_salt) }
+    salt "asdasdastr4325234324sdfds"
+    crypted_password Sorcery::CryptoProviders::BCrypt.encrypt("secret123", "asdasdastr4325234324sdfds")
   end
 end

@@ -1,47 +1,34 @@
 require 'spec_helper'
 
 describe UsersController do
+  describe "#new" do
+    before { get :new }
 
-  describe "GET 'show'" do
-    it "returns http success" do
-      get 'show'
+    it "should assign @user" do
+      assigns(:user).should_not be_nil
+      assigns(:user).class.should be User
+    end
+
+    it "should respond successfully" do
       response.should be_success
     end
   end
 
-  describe "GET 'new'" do
-    it "returns http success" do
-      get 'new'
-      response.should be_success
+  describe "#create" do
+    context "with valid params" do
+      let(:new_user) { attributes_for :user }
+
+      it "should redirect to root_path" do
+        post :create, user: new_user
+        response.should be_redirect
+      end
+    end
+
+    context "with invalid params" do
+      it "should render :new" do
+        post :create, user: { email: nil }
+        response.should render_template :new
+      end
     end
   end
-
-  describe "GET 'create'" do
-    it "returns http success" do
-      get 'create'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'edit'" do
-    it "returns http success" do
-      get 'edit'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'update'" do
-    it "returns http success" do
-      get 'update'
-      response.should be_success
-    end
-  end
-
-  describe "GET 'destroy'" do
-    it "returns http success" do
-      get 'destroy'
-      response.should be_success
-    end
-  end
-
 end
