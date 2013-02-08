@@ -26,7 +26,7 @@
         %li= link_to 'Privacy Policy', '#'
         %li= link_to 'Terms of Service', '#'
         %li= link_to 'Contact Us', '#'
-    - if user_signed_in?
+    - if current_user
       %li
         = link_to 'My Account', '#'
         %ul
