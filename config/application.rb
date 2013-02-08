@@ -68,6 +68,9 @@ module ClosetCrunch
     # Asset paths
     config.assets.paths << Rails.root.join('vendor', 'assets', 'fonts')
 
+    # Don't initialize on precompile
+    config.assets.initialize_on_precompile = false
+
     # Like a rock, Like a planet, Like a fucking atom bomb! - Bad Religion
     config.generators do |g|
       g.view_specs false
