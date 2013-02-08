@@ -9,7 +9,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new params[:user]
     if @user.save
-      redirect_to root_path, flash: { success: 'Thanks for joining Closetcrunch' }
+      login(params[:user][:email], params[:user][:password])
+      redirect_to root_path, flash: { success: 'Thank for joining Closetcrunch!' }
     else
       render :new
     end
