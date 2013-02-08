@@ -1,5 +1,3 @@
-= @user.errors.inspect
-
 .span7.borderright
   %h2 Join Closetcrunch.com
   .row-fluid You control this from the admin section
@@ -13,12 +11,10 @@
       .row-fluid
         = f.password_field :password, class: 'bigformoneline span9', placeholder: 'Password'
       .row-fluid
-        %label.checkbox
-          = check_box_tag :agree
-          I agree to the terms of the
-          = link_to 'User Agreement', '#'
-          and
-          = link_to 'Privacy Policy', '#'
+        = f.check_box :agree
+        = f.label :agree,
+          raw("I agree to the terms of the #{link_to 'User Agreement', '#'} and #{link_to 'Privacy Policy', '#'}"),
+          class: 'checkbox agreement_to_terms'
       %hr
       .row-fluid
         .span3
