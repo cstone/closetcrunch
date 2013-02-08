@@ -3,16 +3,15 @@
   .row-fluid You control this from the admin section
   %br
   #regform
-    = form_for @user, url: create_user_session_path do |f|
+    = form_for User.new, url: create_user_session_path do |f|
       .row-fluid
-        = f.email_field :email, class: 'bigformoneline span9', placeholder: 'Email Address'
+        = email_field_tag :email, nil, class: 'bigformoneline span9', placeholder: 'Email Address'
       .row-fluid
-        = f.password_field :password, class: 'bigformoneline span9', placeholder: 'Password'
+        = password_field_tag :password, nil, class: 'bigformoneline span9', placeholder: 'Password'
       .row-fluid
         .span2
-          %label.checkbox
-            Remember me
-            = check_box_tag :remember_me
+          = check_box_tag :remember_me
+          = label_tag :remember_me, 'Remember Me', class: 'checkbox'
         .span8
           = link_to 'Forgot password?'
       %hr
