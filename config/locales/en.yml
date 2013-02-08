@@ -1,5 +1,6 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  user_mailer:
+    activation_needed_email:
+      subject: 'Please confirm your email address'
+    activation_success_email:
+      subject: 'Thank you for confirming your email address'
