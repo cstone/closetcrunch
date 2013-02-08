@@ -4,8 +4,12 @@ ClosetCrunch::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
 
   resources :sessions, only: [:new, :create, :destroy]
-  resources :users, except: :index
   resources :pages, only: :show
+  resources :users, except: :index do
+    member do
+      get :activate
+    end
+  end
 
   get '/join' => 'users#new', as: :new_user_registration
   get '/login' => 'sessions#new', as: :new_user_session

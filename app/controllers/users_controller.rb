@@ -16,11 +16,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = find_user
+    @user = load_user
   end
 
   def update
-    @user = find_user
+    @user = load_user
     if @user.update_attributes params[:user]
       redirect_to root_path, flash: { success: 'Your profile has been saved' }
     else
@@ -29,14 +29,23 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = find_user
+    user = load_user
     user.delete
     redirect_to root_path, flash: { success: 'Your account has been disabled' }
   end
 
+  def activate
+    if @user = User.load_from_activation_token(params[:id])
+      @user.activate!
+      redirect_to root_path, flash: { success: 'You\'ve successfully activated your account' }
+    else
+      not_authenticated
+    end
+  end
+
   protected
 
-  def find_user
+  def load_user
     User.find params[:id]
   end
 end
