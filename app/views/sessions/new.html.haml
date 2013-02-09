@@ -22,12 +22,12 @@
 .span3.borderright
   %h4 Sign in via
   .row-fluid
-    = link_to '#', class: 'btn btn-large btn-block btn-facebook' do
+    = link_to auth_at_provider_path(provider: :facebook), class: 'btn btn-large btn-block btn-facebook' do
       %i.icon-facebook
       Facebook
   %br
   .row-fluid
-    = link_to '#', class: 'btn btn-large btn-block btn-twitter' do
+    = link_to auth_at_provider_path(provider: :twitter), class: 'btn btn-large btn-block btn-twitter' do
       %i.icon-twitter
       Twitter
   %hr
