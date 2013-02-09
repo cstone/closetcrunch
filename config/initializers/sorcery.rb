@@ -81,7 +81,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :google, :liveid] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:twitter, :facebook]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -105,16 +105,16 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  # config.twitter.key = ""
-  # config.twitter.secret = ""
-  # config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
-  # config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = "XPWNO6dhPUoWoc5Kq8WK1Qi"
+  config.twitter.secret = "TTDPWrezExiQfW6lt8J82jOD6PB7WrlFoiczPt4C2w"
+  config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
+  config.twitter.user_info_mapping = {:email => "screen_name"}
   #
-  # config.facebook.key = ""
-  # config.facebook.secret = ""
-  # config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
-  # config.facebook.user_info_mapping = {:email => "name"}
-  # config.facebook.access_permissions = ["email", "publish_stream"]
+  config.facebook.key = "166514990163102"
+  config.facebook.secret = "bbabecc64eb91caf52a9f8dec4a7be06"
+  config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+  config.facebook.user_info_mapping = {:email => "email"}
+  config.facebook.access_permissions = ["email", "publish_stream"]
   #
   # config.github.key = ""
   # config.github.secret = ""
@@ -399,7 +399,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.
