@@ -14,6 +14,7 @@ ClosetCrunch::Application.routes.draw do
   get '/join' => 'users#new', as: :new_user_registration
   get '/login' => 'sessions#new', as: :new_user_session
   post '/login' => 'sessions#create', as: :create_user_session
+  get '/logout' => 'sessions#destroy', as: :get_destroy_user_session
   delete '/logout' => 'sessions#destroy', as: :destroy_user_session
 
   get '/:id' => 'pages#show'
