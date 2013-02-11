@@ -107,12 +107,12 @@ Rails.application.config.sorcery.configure do |config|
   #
   config.twitter.key = "XPWNO6dhPUoWoc5Kq8WK1Q"
   config.twitter.secret = "TTDPWrezExiQfW6lt8J82jOD6PB7WrlFoiczPt4C2w"
-  config.twitter.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=twitter"
+  config.twitter.callback_url = "http://closetcrunch.dev/oauth/callback?provider=twitter"
   config.twitter.user_info_mapping = {:email => "screen_name"}
   #
   config.facebook.key = "166514990163102"
   config.facebook.secret = "bbabecc64eb91caf52a9f8dec4a7be06"
-  config.facebook.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=facebook"
+  config.facebook.callback_url = "http://closetcrunch.dev/oauth/callback?provider=facebook"
   config.facebook.user_info_mapping = {:email => "email"}
   config.facebook.access_permissions = ["email", "publish_stream"]
   #
