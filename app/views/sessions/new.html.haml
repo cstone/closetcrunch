@@ -5,7 +5,7 @@
   #regform
     = form_for User.new, url: create_user_session_path do |f|
       .row-fluid
-        = email_field_tag :email, nil, class: 'bigformoneline span9', placeholder: 'Email Address'
+        = text_field_tag :email, nil, class: 'bigformoneline span9', placeholder: 'Username or Email Address'
       .row-fluid
         = password_field_tag :password, nil, class: 'bigformoneline span9', placeholder: 'Password'
       .row-fluid
