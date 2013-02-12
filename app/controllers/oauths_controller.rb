@@ -18,7 +18,7 @@ class OauthsController < ApplicationController
         auto_login @user
         redirect_to root_path, flash: { success: "Logged in from #{provider.titleize}" }
       rescue
-        redirect_to root_path, flash: { success: "Failed to login from #{provider.titleize!}" }
+        redirect_to root_path, flash: { success: "Failed to login from #{provider.titleize}" }
       end
     end
   end
