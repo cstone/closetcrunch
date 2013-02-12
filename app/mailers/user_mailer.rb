@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: 'no-reply@closetcrunch.com'
+  default from: 'noreply@closetcrunch.com'
 
   def activation_needed_email user
     @user = user
@@ -11,6 +11,13 @@ class UserMailer < ActionMailer::Base
   def activation_success_email user
     @user = user
     @url = "http://closetcrunch.com/login"
+
+    mail to: user.email
+  end
+
+  def reset_password_email user
+    @user = user
+    @url = "http://closetcrunch.com/password_resets/#{user.reset_password_token}/edit"
 
     mail to: user.email
   end

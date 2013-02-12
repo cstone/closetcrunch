@@ -4,3 +4,5 @@ en:
       subject: 'Please confirm your email address'
     activation_success_email:
       subject: 'Thank you for confirming your email address'
+    reset_password_email:
+      subject: "Your password has been reset"
