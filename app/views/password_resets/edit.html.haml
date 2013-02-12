@@ -1,0 +1,17 @@
+.span10.borderright
+  %h2 Choose a new password
+  .row-fluid This is text that I can control from the the admin section.
+  %br
+  #regform
+    = form_for @user, url: password_reset_path(@user), html: { method: :put } do |f|
+      .row-fluid
+        %strong
+          = @user.email
+      %br
+      .row-fluid= f.password_field :password, class: 'bigformoneline span9', placeholder: 'New Password'
+      = hidden_field_tag :token, @token
+      %hr
+      .row-fluid
+        .span4
+          %button.btn.btn-large.btn-block.btn-main{ type: 'submit' } Change Password
+

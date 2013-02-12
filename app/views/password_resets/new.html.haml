@@ -1,0 +1,12 @@
+.span10.borderright
+  %h2 Reset password
+  .row-fluid This is text that I can control from the the admin section.
+  %br
+
+  #regform
+    = form_tag password_resets_path, method: :post do
+      .row-fluid= email_field_tag :email, nil, class: 'bigformoneline span9', placeholder: 'Email Address'
+      %hr
+      .row-fluid
+        .span4
+          %button.btn.btn-large.btn-block.btn-main{type: 'submit'} Reset Password

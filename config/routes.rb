@@ -4,6 +4,7 @@ ClosetCrunch::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :pages, only: :show
+  resources :password_resets
   resources :users, except: :index do
     member do
       get :activate
