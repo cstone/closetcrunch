@@ -7,6 +7,8 @@
       .row-fluid
         = text_field_tag :full_name, nil, class: 'bigformoneline span9', placeholder: 'Full Name'
       .row-fluid
+        = f.text_field :username, class: 'bigformoneline span9', placeholder: 'Username'
+      .row-fluid
         = f.email_field :email, class: 'bigformoneline span9', placeholder: 'Email Address'
       .row-fluid
         = f.password_field :password, class: 'bigformoneline span9', placeholder: 'Password'

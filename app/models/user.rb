@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
-  attr_accessible :email, :password, :salt, :crypted_password, :agree, :authentications_attributes
+  attr_accessible :username, :email, :password, :salt, :crypted_password, :agree, :authentications_attributes
 
   has_many :authentications, dependent: :destroy
 
@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
 
   scope :recent, -> { order 'id desc' }
 
-  validates :email, presence: true, uniqueness: true
+  validates :username, presence: true, uniqueness: { case_sensitive: false }
+  validates :email, presence: true, uniqueness: { case_sensitive: false }
   validates :password, presence: true
   validates :agree, acceptance: true
 end
