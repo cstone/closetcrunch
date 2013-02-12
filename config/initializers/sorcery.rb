@@ -105,16 +105,16 @@ Rails.application.config.sorcery.configure do |config|
   # Twitter wil not accept any requests nor redirect uri containing localhost,
   # make sure you use 0.0.0.0:3000 to access your app in development
   #
-  config.twitter.key = "XPWNO6dhPUoWoc5Kq8WK1Q"
-  config.twitter.secret = "TTDPWrezExiQfW6lt8J82jOD6PB7WrlFoiczPt4C2w"
-  config.twitter.callback_url = "http://closetcrunch.dev/oauth/callback?provider=twitter"
-  config.twitter.user_info_mapping = {:email => "screen_name"}
+  config.twitter.key = 'XPWNO6dhPUoWoc5Kq8WK1Q'
+  config.twitter.secret = 'TTDPWrezExiQfW6lt8J82jOD6PB7WrlFoiczPt4C2w'
+  config.twitter.callback_url = 'http://closetcrunch.dev/oauth/callback?provider=twitter'
+  config.twitter.user_info_mapping = { username: 'screen_name', email: 'screen_name' }
   #
-  config.facebook.key = "166514990163102"
-  config.facebook.secret = "bbabecc64eb91caf52a9f8dec4a7be06"
-  config.facebook.callback_url = "http://closetcrunch.dev/oauth/callback?provider=facebook"
-  config.facebook.user_info_mapping = {:email => "email"}
-  config.facebook.access_permissions = ["email", "publish_stream"]
+  config.facebook.key = '166514990163102'
+  config.facebook.secret = 'bbabecc64eb91caf52a9f8dec4a7be06'
+  config.facebook.callback_url = 'http://closetcrunch.dev/oauth/callback?provider=facebook'
+  config.facebook.user_info_mapping = { email: 'email', username: 'username' }
+  config.facebook.access_permissions = ['email', 'publish_stream']
   #
   # config.github.key = ""
   # config.github.secret = ""
