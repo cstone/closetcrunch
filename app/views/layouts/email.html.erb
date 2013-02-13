@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Closetcrunch.com</title>
+    <style type="text/css">
+      body {
+        background-color: #F0F0F0;
+      }
+    </style>
+  </head>
+<body>
+  <table width="700" border="0" align="center" style="border:5px solid #FFFFFF; background-color:#FFFFFF; margin-top:25px; font-family: 'Helvetica Neue', Helvetica, Tahoma, Arial, sans-serif !important; color:#495678;">
+    <tr>
+      <td style="padding: 5px 0;">
+        <a href="http://www.closetcrunch.com">
+          <img src="http://closetcrunch.dev<%= asset_path('email-logo.jpg') %>" width="155" height="80" alt="" style="border:none;" />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td style="font-size: 13px; padding:5px 15px; line-height:160%;">
+        <%= yield %>
+      </td>
+    </tr>
+
+    <tr>
+      <td style="padding:5px 15px; font:11px/150% Verdana, Geneva, sans-serif; text-align:center; background-color:#495678; color:#FFFFFF; ">
+        <span style="font-size:12px; padding:10px 15px; line-height:160%;">
+          This message was sent to <a href="#" style="text-decoration:none; color:#ffffff;"><%= @user.email %></a> from <a href="#" style="text-decoration:none; color:#ffffff;">Closetcrunch.com</a>.
+        </span>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
