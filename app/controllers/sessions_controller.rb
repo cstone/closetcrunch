@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
   def create
     if @user = login(params[:email], params[:password], params[:remember_me])
+      User.increment_counter(:sign_in_count, @user)
       redirect_back_or_to root_path, success: 'Successfully logged in'
     else
       render :new
