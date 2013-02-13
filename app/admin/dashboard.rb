@@ -5,15 +5,15 @@ ActiveAdmin.register_page "Dashboard" do
   content :title => proc{ I18n.t("active_admin.dashboard") } do
     columns do
       column do
-        panel "Most recent listings" do
-          para "Welcome to ActiveAdmin."
+        panel "10 most recent listings" do
+          para "Welcome"
         end
       end
 
       column do
-        panel "Most recent users" do
+        panel "10 most recent users" do
           ul do
-            users = User.limit(5).recent
+            users = User.limit(10).recent
             users.each do |u|
               li link_to(u.email, admin_user_path(u))
             end
@@ -22,8 +22,13 @@ ActiveAdmin.register_page "Dashboard" do
       end
 
       column do
-        panel "Most active users" do
-          para "Welcome to ActiveAdmin."
+        panel "Top most 10 active users" do
+          ol do
+            users = User.limit(10).most_active
+            users.each do |u|
+              li raw "#{u.username.capitalize} #{link_to u.email, admin_user_path(u)}"
+            end
+          end
         end
       end
     end

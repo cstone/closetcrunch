@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :authentications
 
   scope :recent, -> { order 'id desc' }
+  scope :most_active, -> { order 'sign_in_count desc' }
 
   validates :username, presence: true, uniqueness: { case_sensitive: false }
   validates :email, presence: true, uniqueness: { case_sensitive: false }
