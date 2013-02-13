@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130213043436) do
+ActiveRecord::Schema.define(:version => 20130213044753) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -87,11 +87,11 @@ ActiveRecord::Schema.define(:version => 20130213043436) do
   add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                           :null => false
+    t.string   "email",                                          :null => false
     t.string   "crypted_password"
     t.string   "salt"
-    t.datetime "created_at",                      :null => false
-    t.datetime "updated_at",                      :null => false
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
     t.string   "activation_state"
     t.string   "activation_token"
     t.datetime "activation_token_expires_at"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(:version => 20130213043436) do
     t.datetime "reset_password_token_expires_at"
     t.datetime "reset_password_email_sent_at"
     t.string   "username"
+    t.integer  "sign_in_count",                   :default => 0
   end
 
   add_index "users", ["activation_token"], :name => "index_users_on_activation_token"
